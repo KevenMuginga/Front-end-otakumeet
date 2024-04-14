@@ -1,0 +1,64 @@
+<div class="perfil">
+    <h2 routerLink="/otakumeet">OtakuMeet</h2>
+    <div class="column d-perfil" *ngIf="myPersonagem">
+      <img [src]="myPersonagem.imgUrl" alt="" class="avatarPerfil cursor" routerLink="perfil/{{ myPersonagem.id }}"/>
+      <h3 *ngIf="myPersonagem">{{ myPersonagem.nome }}</h3>
+      <p *ngIf="myPersonagem">{{ myPersonagem.usuario.nome }}</p>
+      <div class="row d-follows">
+        <div>
+          <h4 class="column">{{ myPersonagem.posts.length }}</h4>
+          <p>posts</p>
+        </div>
+        <div class="column">
+          <h4>{{ myPersonagem.seguidores.length }}</h4>
+          <p>Follow</p>
+        </div>
+        <div class="column">
+          <h4>{{ myPersonagem.aSeguir.length }}</h4>
+          <p>Following</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-feed">
+      <div class="row">
+        <div class="row">
+          <img src="../../assets/home.png" alt="feedimg" class="icon" routerLink="/otakumeet"/>
+          <div class="p-10"></div>
+          <p routerLink="/otakumeet">Home</p>
+        </div>
+        <p>#</p>
+      </div>
+      <div class="row">
+        <div class="row">
+          <img src="../../assets/chat (1).png" alt="messageimg" class="icon" />
+          <div class="p-10"></div>
+          <p>Mensagens</p>
+        </div>
+        <p>#</p>
+      </div>
+      <div class="row">
+        <div class="row">
+          <img src="../../assets/bell.png" alt="notificationimg" class="icon" />
+          <div class="p-10"></div>
+          <p>Notificaoes</p>
+        </div>
+        <p>#</p>
+      </div>
+      <div class="row">
+        <div class="row">
+          <img src="../../assets/settings.png" alt="settingimg" class="icon" />
+          <div class="p-10"></div>
+          <p>Definicoes</p>
+        </div>
+        <p>#</p>
+      </div>
+      <div class="row">
+        <div class="row">
+          <img (click)="logout()" src="../../../assets/logout.png" alt="notificationimg" class="icon" />
+          <div class="p-10"></div>
+          <p (click)="logout()">Log out</p>
+        </div>
+        <p (click)="logout()">#</p>
+      </div>
+    </div>
+  </div>

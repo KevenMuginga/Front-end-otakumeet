@@ -1,0 +1,133 @@
+
+.icon{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+  }
+
+  .p-10{
+    padding: 10px
+  }
+
+p{
+    font-size: 10pt;;
+}
+
+h3{
+    font-size: 12pt;
+}
+
+.btn {
+  font-size: 12pt;
+  width: 70px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: #F2B90F;
+
+}
+
+.black1{
+    background: #242424;
+}
+
+.black2{
+    background: #474747;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatarPerfil{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.avatarPost{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.d-mensagem{
+    height: 100%;
+    width: 100%;
+}
+
+.p-mensagem{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+
+    border-left: 1px solid #6b6b6b;
+
+}
+
+.f-s-mensagem{
+    height: 40px;
+    width: 100%;
+}
+
+.f-s-mensagem input{
+    height: 25%;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #6b6b6b;
+    padding: 11px;
+}
+
+.m-user{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.mychat{
+    height: 60%;
+}
+
+.grupos{
+    height: 79%;
+    overflow-y: auto;
+
+}
+
+
+.others-users{
+    height: 36%;
+    border-top: 1px solid #6b6b6b;
+    overflow-y: auto;
+
+}
+
+.over-name{
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+}

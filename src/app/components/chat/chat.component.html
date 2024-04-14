@@ -1,0 +1,38 @@
+<div class="container p-10 column">
+    <div class="primary black1 p-10" >
+        <!-- <div class=" "> -->
+            <div *ngIf="grupo.primeiraPersonagem.id==token.unique_name" class="row">
+                <img [src]="grupo.segundaPersonagem.imgUrl" alt="" class="icon cursor" routerLink="/otakumeet/perfil/{{ grupo.segundaPersonagem.id }}">
+                <div class="p-10"></div>
+                <h3 routerLink="/otakumeet/perfil/{{ grupo.segundaPersonagem.id }}">{{ grupo.segundaPersonagem.nome }}</h3>
+            </div>
+            <div *ngIf="grupo.segundaPersonagem.id==token.unique_name" class="row">
+                <img [src]="grupo.primeiraPersonagem.imgUrl" alt="" class="icon cursor" routerLink="/otakumeet/perfil/{{ grupo.primeiraPersonagem.id }}">
+                <div class="p-10"></div>
+                <h3 routerLink="/otakumeet/perfil/{{ grupo.primeiraPersonagem.id }}">{{ grupo.primeiraPersonagem.nome }}</h3>
+            </div>
+            <div class="border-bottom"></div>
+            <div class="secondary">
+                <div *ngFor="let item of mensagens">
+                    <div class="myMessage p-10" *ngIf="item.personagemId==token.unique_name">
+                        <div class="myMessageText p-10 black3">
+                            <p class="maxWidth">{{ item.descricao }}</p>
+                        </div>
+                    </div>
+                    <div class="notMyMessage p-10" *ngIf="item.personagemId!=token.unique_name">
+                        <div class="notMyMessageText p-10 black2">
+                            <p class="maxWidth">{{ item.descricao }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+        
+    </div>
+    <div class="p-10"></div>
+    <form [formGroup]="form" (submit)="onSubmit()" class="form row">
+        <input formControlName="descricao" type="text" placeholder="escreve a mensagem...">
+        <div class="p-10"></div>
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+</div>

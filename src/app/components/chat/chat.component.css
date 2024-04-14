@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  height: 96%;
+}
+
+.icon{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+  }
+
+.btn {
+  font-size: 12pt;
+  width: 70px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: #f2b90f;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.primary {
+  height: 87%;
+  width: 100%;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.form {
+  height: 8%;
+  width: 100%;
+}
+
+.form input {
+  height: 80%;
+  width: 90%;
+  background: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.myMessage {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: auto;
+}
+
+.myMessageText {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.notMyMessage {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.notMyMessageText {
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+.maxWidth {
+  max-width: initial;
+  white-space: normal;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+.secondary{
+    height: 90%;
+    /* background: white; */
+    overflow-y: auto;
+}

@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.black0{
+    background: #000;
+}
+
+.black1{
+    background: #242424;
+}
+
+.black2{
+    background: #474747;
+}
+
+.black3{
+    background: #6b6b6b;
+}
+
+.black4{
+    background: #8e8e8e;
+}
+
+.laranja {
+    background: #f2b90f;
+  }
+  
+  .verde{
+    background: #bed95b;
+  }
+  
+  .castanho {
+    background: #260101;
+  }
+
+.border-bottom{
+    border-bottom: 1px solid #6b6b6b;
+
+}
+
+.border-radius{
+    border-radius: 10px;
+
+}
+
+*::-webkit-scrollbar-track{
+    display: none;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+
+}
+
+*::-webkit-scrollbar-thumb{
+    display: none;
+
+}
+
+

@@ -1,0 +1,73 @@
+<div class="d-post">
+    <form [formGroup]="form" (submit)="onSubmit()" class="black1 post">
+      <div class="form1">
+        <img
+          [src]="myPersonage.imgUrl"
+          alt="perfilimg"
+          class="avatarPost"
+        />
+        <div class="p-10"></div>
+        <input
+          formControlName="descricao"
+          type="text"
+          placeholder="conte alguma coisa..."
+          class="black2"
+        />
+      </div>
+      <div class="row d-bPost">
+        <div class="row">
+          <div class="column">
+            <label for="imgPost" class="cursor">
+              <img src="../../assets/addimage.png" alt="Addimg" class="icon" />
+              <p>add img</p>
+            </label>
+            <input (input)="selectFile($event)" id="imgPost" type="file" style="display: none;">
+          </div>
+          <div>
+            <img alt="">
+          </div>
+        </div>
+        <button class="btn">post</button>
+      </div>
+    </form>
+    <div class="p-5"></div>
+    <div class="div-posts">
+      <div class="u-post black1 " *ngFor="let item of allPosts">
+        <div class="row">
+          <div class="u-post-menu">
+            <div class="row">
+              <img
+                [src]="item.personagem.imgUrl"
+                alt="perfiling"
+                class="avatarPost"
+                routerLink="perfil/{{item.personagem.id}}"
+              />
+              <div class="p-10"></div>
+              <div class="column-perfil">
+                <h3>{{ item.personagem.nome }}</h3>
+                <p>data</p>
+              </div>
+            </div>
+          </div>
+          <button>...</button>
+        </div>
+        <div class="c-post">
+          <img [src]="item.imgUrl" alt="imgPost" />
+          <div class="d-descricao">
+            <p routerLink="post/{{item.id}}">{{ item.descricao }}</p>
+          </div>
+        </div>
+        <div class="row d-reacao">
+          <div class="column">
+            <img src="../../assets/star.png" alt="" class="icon" />
+            <p>#</p>
+          </div>
+          <div class="p-10"></div>
+          <div class="column">
+            <img src="../../assets/comentarios.png" alt="" class="icon" routerLink="post/{{item.id}}"/>
+            <p>{{ item.comentarios.length }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

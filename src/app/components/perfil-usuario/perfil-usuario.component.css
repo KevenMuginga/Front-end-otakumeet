@@ -1,0 +1,100 @@
+.icon{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+  }
+
+  .p-10{
+    padding: 10px
+  }
+
+p{
+    font-size: 10pt;;
+}
+
+h3{
+    font-size: 12pt;
+}
+
+.btn {
+  font-size: 12pt;
+  width: 70px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: #F2B90F;
+
+}
+
+.column-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.avatarPerfil{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.avatarPost{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.d-follows div{
+    padding: 20px;
+}
+
+.d-perfil{
+    border-bottom: 1px solid #6b6b6b;
+}
+
+.d-perfil img{
+    padding: 15px;
+}
+
+.u-post{
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.u-post-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-post{
+    width: 100%;
+    height: 10%;
+    padding: 15px 0px;
+}
+
+.c-post img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.d-descricao{
+    padding: 15px;
+}
+
+.d-reacao{
+    padding: 15px;
+    border-top: 1px solid #6b6b6b;
+}
+
+.div-posts{
+    height: 80%;
+    overflow-y:auto;
+}

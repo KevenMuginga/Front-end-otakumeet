@@ -1,0 +1,14 @@
+<div class="container">
+  <app-perfil></app-perfil>
+  
+  <div class="sub-container row">
+    <div class="d-post">
+      <router-outlet></router-outlet>
+    </div>
+    
+    <div class="div-message">
+      <app-message (conexao)="onConexao($event)"></app-message>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="d-mensagem">
+    <div class="p-mensagem">
+      <div class="mychat">
+        <h2>Mensgens</h2>
+        <div class="p-10"></div>
+        <div>
+          <form action="" class="f-s-mensagem">
+            <input (input)="search($event)" type="text" placeholder="pesquisar" class="black2" />
+          </form>
+        </div>
+        <div class="grupos">
+          <div class="m-user" *ngFor="let item of gruposFilter">
+            <div class="row">
+              <img *ngIf="myPersonagem.nome != item.primeiraPersonagem.nome" [src]="item.primeiraPersonagem.imgUrl" routerLink="chat/{{item.id}}" alt="grupo" class="avatarPost cursor" />
+              <img *ngIf="myPersonagem.nome != item.segundaPersonagem.nome" [src]="item.segundaPersonagem.imgUrl" routerLink="chat/{{item.id}}" alt="grupo" class="avatarPost cursor" />
+              <div class="p-10"></div>
+              <div class="column-perfil cursor" routerLink="chat/{{item.id}}">
+                <h3 *ngIf="myPersonagem.nome != item.primeiraPersonagem.nome" class="over-name">{{ item.primeiraPersonagem.nome }}</h3>
+                <h3 *ngIf="myPersonagem.nome != item.segundaPersonagem.nome" class="over-name">{{ item.segundaPersonagem.nome }}</h3>
+                <p *ngIf="item.mensagens.length>0">{{ item.mensagens[item.mensagens.length-1].descricao}}</p>
+              </div>
+            </div>
+            <img src="../../assets/chat.png" alt="" class="icon cursor" routerLink="chat/{{item.id}}"/>
+          </div>
+        </div>
+        <!-- <div class="m-user" *ngFor="let item of seguindo">
+          <div class="row">
+            <img [src]="item.imgUrl" routerLink="chat/{{item.id}}" alt="" class="avatarPost cursor" />
+            <div class="p-10"></div>
+            <div class="column-perfil cursor" routerLink="chat/{{item.id}}">
+              <h3 class="over-name">{{ item.nome }}</h3>
+              <p>data</p>
+            </div>
+          </div>
+          <img src="../../assets/chat.png" alt="" class="icon cursor" routerLink="chat/{{item.id}}"/>
+        </div> -->
+      </div>
+      <div class="others-users">
+        <div class="m-user" *ngFor="let item of personagens">
+          <div class="row" >
+            <img [src]="item.imgUrl" alt="" class="avatarPost cursor" routerLink="/otakumeet/perfil/{{item.id}}"/>
+            <div class="p-10"></div>
+            <div class="column-perfil">
+              <h3 class="over-name" routerLink="perfil/{{item.id}}">{{ item.nome }}</h3>
+              <p>{{ item.anime.nome }}</p>
+            </div>
+          </div>
+          <img (click)="seguir(item.id)" src="../../assets/add-friend.png" alt="" class="icon cursor" />
+        </div>
+      </div>
+    </div>
+  </div>

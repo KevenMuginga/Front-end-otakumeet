@@ -1,0 +1,333 @@
+.div-home {
+  background-image: url(../../assets/cm.jpg);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  max-width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  color: white;
+}
+
+h2 {
+  font-size: 45pt;
+}
+
+.white {
+  color: white;
+}
+
+.c-laranja {
+  color: #f2b90f;
+}
+
+.aqua {
+  background: aqua;
+}
+
+.laranja {
+  background: #f2b90f;
+}
+
+.verde {
+  background: #bed95b;
+}
+
+.castanho {
+  background: #260101;
+}
+
+.content {
+  padding: 8% 12%;
+}
+
+.menu {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu img {
+  width: 5%;
+  height: 5%;
+}
+
+nav {
+  margin: 0 30px;
+}
+
+li {
+  list-style: none;
+  float: left;
+}
+
+a {
+  font-size: 16pt;
+  text-decoration: none;
+  padding: 8px 16px;
+  color: white;
+}
+
+a:hover {
+  color: #f2b90f;
+}
+
+.div-text {
+  padding: 80px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+p {
+  font-weight: light;
+  font-size: 12pt;
+  color: #f3f3f3;
+}
+
+.btn {
+  font-size: 12pt;
+  margin-top: 20px;
+  width: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.images-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.images-list img {
+  height: 10%;
+  width: 12%;
+}
+
+.div-sobre {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.div-sobre img {
+  height: 80%;
+  margin-right: 3%;
+}
+
+.div-sobre div {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.div-sobre div h2 {
+  color: black;
+}
+
+.div-sobre div p {
+  color: black;
+  font-size: 16pt;
+}
+
+.d-volumes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8% 12%;
+}
+
+.d-volumes2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.volumes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.volume {
+  height: 330px;
+  width: 250px;
+  padding: 10px;
+}
+
+.volume p {
+  color: #260101;
+}
+
+.volume button {
+  color: white;
+}
+
+.volume img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.d-contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-contactos div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1400px) {
+  h2 {
+    font-size: 35pt;
+  }
+
+  .div-sobre div {
+    height: 80vh;
+    overflow-y: scroll;
+  }
+
+  .content {
+    padding: 5% 12%;
+  }
+
+  .d-volumes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 12% 15% 12%;
+  }
+
+  .volume {
+    height: 200px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .volume img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 850px) {
+  .div-home {
+    height: 80vh;
+  }
+
+  .div-sobre {
+    height: 60vh;
+  }
+
+  .div-sobre img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .div-sobre div {
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .content {
+    padding: 5% 9%;
+  }
+
+  .d-volumes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 12% 15% 12%;
+  }
+
+  .volume {
+    height: 200px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .volume img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 880px) {
+  .d-volumes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 5% 15% 5%;
+  }
+
+  .volume {
+    height: 250px;
+    width: 120px;
+    padding: 10px;
+  }
+
+  .volume img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 720px) {
+
+    .div-home{
+        height: 80vh;
+        background-size: cover;
+  background-size: 100%;
+    }
+
+    .d-volumes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 2% 15% 2%;
+  }
+
+  .volumes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .volume {
+    height: 620px;
+    width: 350px;
+    padding: 10px;
+  }
+
+  .volume img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+}

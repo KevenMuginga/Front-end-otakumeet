@@ -1,0 +1,238 @@
+.container{
+    background: #242424;
+    color: white;
+    width: 96vw;
+    height: 94vh;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+  }
+
+  .p-10{
+    padding: 10px
+  }
+
+p{
+    font-size: 10pt;;
+}
+
+.btn {
+  font-size: 12pt;
+  width: 70px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: #F2B90F;
+
+}
+
+.black1{
+    background: #242424;
+}
+
+.black2{
+    background: #474747;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatarPerfil{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.avatarPost{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.d-perfil{
+    margin-top: 50px;
+}
+
+.d-perfil img{
+    padding: 15px;
+}
+
+.d-follows{
+
+}
+
+.d-follows div{
+    padding: 20px;
+}
+
+.d-feed{
+    width: 80%;
+    border-top: 1px solid #6b6b6b;
+    border-bottom: 1px solid #6b6b6b;
+}
+
+.d-feed div{
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.sub-container{
+    width: 75%;
+    background: #474747;
+    border-radius: 20px;
+    border: 1px solid #6b6b6b;
+}
+
+.d-post{
+    height: 88%;
+    max-height: 88%;
+    width: 70%;
+    padding: 3%;
+    overflow-y: auto;
+}
+
+.post{
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.post form{
+    height: 40px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post form input{
+    height: 25%;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #6b6b6b;
+    padding: 11px;
+}
+
+.d-bPost{
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.d-bPost div div{
+    padding: 0 10px;
+}
+
+.u-post{
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.u-post-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-post{
+    width: 100%;
+    height: 10%;
+    padding: 15px 0px;
+}
+
+.c-post img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.d-descricao{
+    padding: 15px;
+}
+
+.d-reacao{
+    padding: 15px;
+    border-top: 1px solid #6b6b6b;
+}
+
+.div-message{
+    height: 100%;
+    width: 20%;
+}
+/* 
+.d-mensagem{
+    height: 100%;
+    width: 20%;
+}
+
+.p-mensagem{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+
+    border-left: 1px solid #6b6b6b;
+
+}
+
+.f-s-mensagem{
+    height: 40px;
+    width: 100%;
+}
+
+.f-s-mensagem input{
+    height: 25%;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #6b6b6b;
+    padding: 11px;
+}
+
+.m-user{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.mychat{
+    height: 60%;
+}
+
+.others-users{
+    height: 40%;
+    border-top: 1px solid #6b6b6b;
+
+} */
+
+
+

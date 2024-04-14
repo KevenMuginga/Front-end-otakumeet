@@ -1,0 +1,58 @@
+<div class="container black0">
+  <div class="content black1">
+    <h2>Cria o seu Perfil de Personagem</h2>
+    <form [formGroup]="form" (submit)="onSubmit()" autocomplete="off">
+      <div class="d-input">
+        <label for="">Anime</label><br />
+        <select (change)="getPersonagens($event)" class="input">
+          <option [value]="item.id" *ngFor="let item of animes">
+            {{ item.nome }}
+          </option>
+        </select>
+        <!-- <input type="text" formControlName="anime" placeholder="anime"/> -->
+      </div>
+      <div class="d-input">
+        <label for="">Personagem</label><br />
+        <select formControlName="personagemId" class="input">
+          <option [value]="item.id" *ngFor="let item of personagens">
+            {{ item.nome }}
+          </option>
+        </select>
+        <!-- <input type="text" formControlName="personagem" placeholder="personagem"/> -->
+      </div>
+      <div class="d-input">
+        <label for="">Seu Nome</label><br />
+        <input type="text" placeholder="usuario" style="display: none" />
+        <input
+          type="text"
+          formControlName="nome"
+          placeholder="usuario"
+          class="input"
+        />
+      </div>
+      <div class="d-input">
+        <label for="">Senha</label><br />
+        <input type="password" placeholder="senha" style="display: none" />
+        <input
+          type="password"
+          formControlName="senha"
+          placeholder="senha"
+          class="input"
+        />
+      </div>
+      <div class="row">
+        <div class="d-submit">
+          <input
+            type="button"
+            value="login"
+            class="btn verde"
+            routerLink="/login"
+          />
+        </div>
+        <div class="d-submit">
+          <input type="submit" value="Finalizar" class="btn laranja" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

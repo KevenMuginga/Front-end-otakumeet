@@ -1,0 +1,57 @@
+<div class="column d-perfil" *ngIf="personagem">
+    <img [src]="personagem.imgUrl" alt="" class="avatarPerfil" />
+    <h3 *ngIf="personagem">{{ personagem.nome }}</h3>
+    <!-- <p *ngIf="personagem">{{ personagem.usuario.nome }}</p> -->
+    <div *ngIf="personagem" class="row d-follows">
+      <div>
+        <h4 class="column">{{ personagem.posts.length }}</h4>
+        <p>posts</p>
+      </div>
+      <div class="column">
+        <h4>{{ personagem.seguidores.length }}</h4>
+        <p>Follow</p>
+      </div>
+      <div class="column">
+        <h4>{{ personagem.aSeguir.length }}</h4>
+        <p>Following</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="u-post black1 " *ngFor="let item of posts">
+      <div class="row">
+        <div class="u-post-menu">
+          <div class="row">
+            <img
+              [src]="item.personagem.imgUrl"
+              alt="perfiling"
+              class="avatarPost"
+            />
+            <div class="p-10"></div>
+            <div class="column-perfil">
+              <h3>{{ item.personagem.nome }}</h3>
+              <p>data</p>
+            </div>
+          </div>
+        </div>
+        <button>...</button>
+      </div>
+      <div class="c-post">
+        <img [src]="item.imgUrl" alt="imgPost" />
+        <div class="d-descricao">
+          <p>{{ item.descricao }}</p>
+        </div>
+      </div>
+      <div class="row d-reacao">
+        <div class="column">
+          <img src="../../assets/star.png" alt="" class="icon" />
+          <p>#</p>
+        </div>
+        <div class="p-10"></div>
+        <div class="column">
+          <img src="../../assets/comentarios.png" alt="" class="icon cursor" routerLink="/otakumeet/post/{{ item.id }}" />
+          <p>{{item.comentarios.length}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,64 @@
+<div class="div-posts">
+  <div class="u-post black1">
+    <div class="row">
+      <div class="u-post-menu">
+        <div class="row">
+          <img
+            [src]="post.personagem.imgUrl"
+            alt="perfiling"
+            class="avatarPost"
+          />
+          <div class="p-10"></div>
+          <div class="column-perfil">
+            <h3>{{ post.personagem.nome }}</h3>
+            <p>data</p>
+          </div>
+        </div>
+      </div>
+      <button>...</button>
+    </div>
+    <div class="c-post">
+      <img [src]="post.imgUrl" alt="imgPost" class="ft-post"/>
+      <div class="d-descricao">
+        <p>{{ post.descricao }}</p>
+      </div>
+      <div class="row d-reacao">
+        <div class="column">
+          <img src="../../assets/star.png" alt="" class="icon" />
+          <p>{{ post.estrelas.length }}</p>
+        </div>
+        <div class="p-10"></div>
+        <div class="column">
+          <img src="../../assets/comentarios.png" alt="" class="icon" />
+          <p>{{ post.comentarios.length }}</p>
+        </div>
+      </div>
+      <div>
+        <div *ngFor="let item of comentarios" >
+          <div class="black2 p-10 border-radius">
+            <div class="row">
+              <img [src]="item.personagem.imgUrl" alt="" />
+              <h3>{{ item.personagem.nome }}</h3>
+            </div>
+            <div class="d-comentario">
+              <p>{{ item.descricao }}</p>
+            </div>
+          </div>
+          <div class="p-5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="p-10"></div>
+  </div>
+
+  <div class="p-10"></div>
+  <form [formGroup]="form" (submit)="onSubmit()" class="form row">
+    <input
+      formControlName="descricao"
+      type="text"
+      placeholder="escreva um comentario..."
+    />
+    <div class="p-10"></div>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</div>

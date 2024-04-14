@@ -1,0 +1,28 @@
+<div class="container black0">
+  <div class="content black1">
+    <h2>Login</h2>
+    <form [formGroup]="formLogin" (submit)="onSubmit()" autocomplete="off">
+      <div class="d-input">
+        <label for="">Anime</label><br />
+        <input type="text" formControlName="anime" placeholder="anime"/>
+      </div>
+      <div class="d-input">
+        <label for="">Personagem</label><br />
+        <input type="text" formControlName="personagem" placeholder="personagem"/>
+      </div>
+      <div class="d-input">
+        <label for="">Senha</label><br />
+        <input type="password" placeholder="senha" style="display: none;"/>
+        <input type="password" formControlName="senha" placeholder="senha"/>
+      </div>
+      <div class="row">
+        <div class="d-submit">
+          <input type="button"  value="cadastro" class="btn verde verde" routerLink="/cadastro">
+        </div>
+        <div class="d-submit">
+          <input type="submit"  value="Entrar" class="laranja btn ">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
