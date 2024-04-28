@@ -1,0 +1,13 @@
+<div class="others-users">
+    <div class="m-user" *ngFor="let item of followings">
+      <div class="row" >
+        <img [src]="item.imgUrl" alt="" class="avatarPost cursor" routerLink="/otakumeet/perfil/{{item.id}}"/>
+        <div class="p-10"></div>
+        <div class="column-perfil">
+          <h3 class="over-name" routerLink="perfil/{{item.id}}">{{ item.nome }}</h3>
+          <p>{{ item.nome }}</p>
+        </div>
+      </div>
+      <img (click)="unfollow(item)" src="../../../assets/delete-friend.png" alt="" class="icon cursor" />
+    </div>
+  </div>

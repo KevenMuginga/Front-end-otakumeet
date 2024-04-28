@@ -4,7 +4,7 @@
       <img [src]="myPersonagem.imgUrl" alt="" class="avatarPerfil cursor" routerLink="perfil/{{ myPersonagem.id }}"/>
       <h3 *ngIf="myPersonagem">{{ myPersonagem.nome }}</h3>
       <p *ngIf="myPersonagem">{{ myPersonagem.usuario.nome }}</p>
-      <div class="row d-follows">
+      <div class="row d-follows" *ngIf="myPersonagem">
         <div>
           <h4 class="column">{{ myPersonagem.posts.length }}</h4>
           <p>posts</p>
@@ -44,13 +44,13 @@
         </div>
         <p>#</p>
       </div>
-      <div class="row">
+      <div class="row cursor" *ngIf="myPersonagem.anime.nome=='Administrador'">
         <div class="row">
-          <img src="../../assets/settings.png" alt="settingimg" class="icon" />
+          <img src="../../assets/settings.png" alt="settingimg" class="icon cursor" routerLink="/administration"/>
           <div class="p-10"></div>
-          <p>Definicoes</p>
+          <p class="cursor" routerLink="/administration">Definicoes</p>
         </div>
-        <p>#</p>
+        <p routerLink="/administration" class="cursor">#</p>
       </div>
       <div class="row">
         <div class="row">
@@ -60,5 +60,8 @@
         </div>
         <p (click)="logout()">#</p>
       </div>
+    </div>
+    <div class="d-followings">
+      <app-following [followUser]="following" (unfollowUser)="onUnfollowUser($event)" ></app-following>
     </div>
   </div>

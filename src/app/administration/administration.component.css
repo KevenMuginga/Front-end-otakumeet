@@ -1,0 +1,71 @@
+.container{
+    color: white;
+    padding: 2% 15% 2% 15%;
+    height: 90vh;
+    max-height: 90vh;
+}
+
+.d-head{
+    height: 13%;
+}
+
+.m-10{
+    margin: 5px;
+}
+
+.first{
+    justify-content: space-between;
+}
+
+.d-head form{
+    width: 60%;
+}
+
+.d-head form input{
+    padding: 10px;
+    width: 90%;
+    border: none;
+}
+
+.head-button{
+    width: 96%;
+    display: flex;
+    justify-content: end;
+}
+
+.d-list{
+    height: 75%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.d-anime{
+    width: 24%;
+    height: 300px;
+}
+
+img{
+    min-width: 100%;
+    width: 100%;
+    min-height: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.d-text{
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn {
+  font-size: 12pt;
+  margin-top: 20px;
+  width: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.laranja {
+  background: #f2b90f;
+}

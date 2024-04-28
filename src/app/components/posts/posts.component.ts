@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PersonagemService } from '../../../services/personagem/personagem.service';
 import { Personagem } from '../../../model/personagem';
+import { Estrela } from '../../../model/estrela';
 
 @Component({
   selector: 'app-posts',
@@ -21,6 +22,7 @@ export class PostsComponent implements OnInit {
 
   form!: FormGroup;
   myPersonage: Personagem = Object.create(null);
+  estrela: Estrela = Object.create(null);
 
   constructor(
     private postService: PostService,
@@ -75,6 +77,25 @@ export class PostsComponent implements OnInit {
     this.personagemService.my().subscribe({
       next:(res=>{
         this.myPersonage = res;
+      }),
+      error:(()=>{
+        console.log("erro get Im")
+      })
+    })
+  }
+
+  addEstrela(post: Post){
+    this.estrela.postId = post.id;
+    this.postService.addEstrela(this.estrela).subscribe({
+      next:(res=>{
+        const index = this.allPosts.findIndex( p => p.id == post.id);
+        this.allPosts[index].estrelas = res.estrelas;
+
+        this.allPosts[index].estrelas.find(value =>{
+          value.id = this.myPersonage.id;
+          console.log("inclui")
+
+        })
       }),
       error:(()=>{
         console.log("erro get Im")

@@ -55,6 +55,7 @@ h3{
 }
 
 .perfil{
+    height:100%;
     width:18vw;
     display: flex;
     flex-direction: column;
@@ -100,4 +101,9 @@ h3{
 .d-feed div{
     justify-content: space-between;
     padding: 5px;
+}
+
+.d-followings{
+    width: 80%;
+    height: 30%;
 }

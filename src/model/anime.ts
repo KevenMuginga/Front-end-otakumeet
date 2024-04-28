@@ -5,7 +5,8 @@ export interface Anime{
     id: number;
     nome: string;
     autor: string;
+    imgUrl: string;
     file: File;
     estado: Estado;
-    Personagens: Personagem[];
+    personagens: Personagem[];
 }

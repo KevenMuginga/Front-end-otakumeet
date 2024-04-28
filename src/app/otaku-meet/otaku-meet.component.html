@@ -1,5 +1,5 @@
 <div class="container">
-  <app-perfil></app-perfil>
+  <app-perfil [follow]="follow" (signalUnfollow)="OnSignalUnfollow($event)"></app-perfil>
   
   <div class="sub-container row">
     <div class="d-post">
@@ -7,7 +7,7 @@
     </div>
     
     <div class="div-message">
-      <app-message (conexao)="onConexao($event)"></app-message>
+      <app-message [unfollowed]="unfollowed" (conexao)="onConexao($event)" (followUser)="onFollowUser($event)"></app-message>
     </div>
     
   </div>

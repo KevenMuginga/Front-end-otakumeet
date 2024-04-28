@@ -1,0 +1,48 @@
+.others-users{
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #6b6b6b;
+    overflow-y: auto;
+
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+  }
+
+.m-user{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+.avatarPost{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-10{
+    padding: 10px
+  }

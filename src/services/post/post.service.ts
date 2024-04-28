@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Post } from '../../model/post';
 import { jwtDecode } from 'jwt-decode';
+import { Estrela } from '../../model/estrela';
 
 @Injectable({
   providedIn: 'root'
@@ -42,5 +43,11 @@ export class PostService {
   }
   put(post: FormData): Observable<Post>{
     return this.httpClient.put<Post>(`${this.api}`, post);
+  }
+
+  addEstrela(estrela: Estrela): Observable<Post>{
+    const token: any = jwtDecode(String(window.localStorage.getItem('token')));
+    estrela.myId = token.unique_name
+    return this.httpClient.post<Post>(`${this.api}/AddEstrela`, estrela);
   }
 }

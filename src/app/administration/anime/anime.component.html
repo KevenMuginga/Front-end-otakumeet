@@ -1,0 +1,25 @@
+<div class="d-head black2 border-radius p-10">
+    <div class="row first">
+      <h2>Animes</h2>
+      <form>
+        <input (input)="search($event)" type="text" placeholder="pesquisar" class="border-radius"/>
+      </form>
+    </div>
+    <div class="head-button">
+        <button class="btn verde" routerLink="/otakumeet">voltar</button>
+        <button class="btn laranja" routerLink="newAnime">Novo</button>
+    </div>
+  </div>
+  <div class="p-10"></div>
+  <div class="d-list black2 border-radius p-10">
+    <div class="list">
+      <div *ngFor="let item of animes" class="d-anime m-10 black1 border-radius">
+        <img [src]="item.imgUrl" [alt]="item.nome" routerLink="anime/{{item.id}}" class="cursor">
+        <div class="d-text column">
+            <h4 routerLink="anime/{{item.id}}" class="cursor">{{ item.nome }}</h4>
+        <p routerLink="anime/{{item.id}}" class="cursor">Personagens: {{ item.personagens.length }}</p>
+        <button class="btn verde" routerLink="editAnime/{{ item.id }}">edit</button>
+        </div>
+    </div>
+    </div>
+  </div>

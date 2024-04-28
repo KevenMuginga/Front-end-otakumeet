@@ -1,0 +1,23 @@
+<div class="d-head black2 border-radius p-10">
+    <div class="row first">
+      <h2>Personagens - {{ anime.nome }}</h2>
+      <form>
+        <input (input)="search($event)" type="text" placeholder="pesquisar" class="border-radius"/>
+      </form>
+    </div>
+    <div class="head-button">
+        <button class="btn verde" routerLink="/administration">voltar</button>
+        <button class="btn laranja" routerLink="/administration/newPersonagem/{{ anime.id }}">Nova</button>
+    </div>
+  </div>
+  <div class="p-10"></div>
+  <div class="d-list black2 border-radius p-10">
+    <div class="list">
+      <div *ngFor="let item of personagens" class="d-anime m-10 black1 border-radius">
+        <img [src]="item.imgUrl" [alt]="item.nome">
+        <div class="d-text column">
+            <h4>{{ item.nome }}</h4>
+        </div>
+    </div>
+    </div>
+  </div>

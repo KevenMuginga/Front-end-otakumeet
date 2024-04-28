@@ -58,14 +58,19 @@
           </div>
         </div>
         <div class="row d-reacao">
-          <div class="column">
-            <img src="../../assets/star.png" alt="" class="icon" />
-            <p>#</p>
+          <div class="row black2 p-10 border-radius">
+            <div>
+              <img  src="../../assets/star.png" alt="" class="icon cursor" (click)="addEstrela(item)"/>
+              <!-- <img  src="../../assets/star.png" alt="" class="icon cursor" (click)="addEstrela(item)"/> -->
+            </div>
+            <div class="p-5"></div>
+            <p *ngIf="item.estrelas.length > 0">{{ item.estrelas.length }}</p>
           </div>
           <div class="p-10"></div>
-          <div class="column">
-            <img src="../../assets/comentarios.png" alt="" class="icon" routerLink="post/{{item.id}}"/>
-            <p>{{ item.comentarios.length }}</p>
+          <div class="row black2 p-10 border-radius" >
+            <img src="../../assets/comentarios.png" alt="" class="icon cursor" routerLink="post/{{item.id}}"/>
+            <div class="p-5"></div>
+            <p *ngIf="item.comentarios.length > 0">{{ item.comentarios.length }}</p>
           </div>
         </div>
       </div>

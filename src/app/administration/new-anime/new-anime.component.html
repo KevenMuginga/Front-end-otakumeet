@@ -1,0 +1,28 @@
+<div class="container black1">
+  <div class="content black2 border-radius">
+    <div class="head-button">
+      <h2>Registo de Anime</h2>
+      <button class="btn verde" routerLink="/administration">voltar</button>
+    </div>
+
+  <form [formGroup]="form" (submit)="onSubmit()" autocomplete="off">
+    <div class="d-input">
+      <label for="">Nome</label><br />
+      <input type="text" formControlName="nome" placeholder="nome"/>
+    </div>
+    <div class="d-input">
+      <label for="">Autor</label><br />
+      <input type="text" formControlName="autor" placeholder="autor"/>
+    </div>
+    <div class="">
+      <input type="file" class="i-file" (change)="onSelectFile($event)"/>
+    </div>
+    <div class="row">
+      <div class="d-submit">
+        <button type="submit" class="btn laranja">Criar</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+  

@@ -70,4 +70,10 @@ export class PersonagemService {
   unFollow(personagem: Follow): Observable<Personagem>{
     return this.httpClient.post<Personagem>(`${this.api}/UnFollow`, personagem);
   }
+
+  stopFollow(personagem: Follow): Observable<any>{
+    const token: any = jwtDecode(String(window.localStorage.getItem('token')));
+    personagem.myId = token.unique_name;
+    return this.httpClient.put<any>(`${this.api}/StopFollow`, personagem);
+  }
 }

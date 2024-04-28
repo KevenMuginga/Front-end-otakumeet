@@ -74,4 +74,8 @@ export class PostComponent implements OnInit{
     })
   }
 
+  addEstrela(post: Post){
+
+  }
+
 }

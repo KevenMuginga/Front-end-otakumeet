@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Comentario } from '../../model/comentario';
 import { HttpClient } from '@angular/common/http';
 import { jwtDecode } from 'jwt-decode';
+import { Estrela } from '../../model/estrela';
+import { Post } from '../../model/post';
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +25,6 @@ export class ComentarioService {
     comentario.personagemId = token.unique_name
     return this.httpClient.post<Comentario>(`${this.api}`, comentario);
   }
+
+  
 }

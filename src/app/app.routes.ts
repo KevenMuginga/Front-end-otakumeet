@@ -10,6 +10,11 @@ import { ChatComponent } from './components/chat/chat.component';
 import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PostComponent } from './components/post/post.component';
+import { AdministrationComponent } from './administration/administration.component';
+import { NewAnimeComponent } from './administration/new-anime/new-anime.component';
+import { AnimeComponent } from './administration/anime/anime.component';
+import { PersonagensComponent } from './administration/personagens/personagens.component';
+import { NewpersonagemComponent } from './administration/newpersonagem/newpersonagem.component';
 
 export const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -22,6 +27,16 @@ export const routes: Routes = [
         {path: 'perfil/:id', component: PerfilUsuarioComponent},
         {path: 'post/:id', component: PostComponent},
     ],
-     canActivate: [autenticacaoGuard]},
+     canActivate: [autenticacaoGuard]
+    },
+    {path: 'administration', component: AdministrationComponent,
+        children:[
+            {path: '', component: AnimeComponent},
+            {path: 'newAnime', component: NewAnimeComponent},
+            {path: 'editAnime/:id', component: NewAnimeComponent},
+            {path: 'anime/:id', component: PersonagensComponent},
+            {path: 'newPersonagem/:id', component: NewpersonagemComponent}
+        ], canActivate: [autenticacaoGuard]
+    }
 
 ];

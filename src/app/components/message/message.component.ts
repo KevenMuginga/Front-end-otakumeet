@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Personagem } from '../../../model/personagem';
 import { PersonagemService } from '../../../services/personagem/personagem.service';
 import { CommonModule } from '@angular/common';
@@ -10,17 +10,21 @@ import { GrupoService } from '../../../services/grupo/grupo.service';
 import { Grupo } from '../../../model/chat';
 import { Follow } from '../../../model/follow';
 import { SignalRService } from '../../../services/hub/signal-r.service';
+import { PerfilComponent } from '../perfil/perfil.component';
 
 @Component({
   selector: 'app-message',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, PerfilComponent],
   templateUrl: './message.component.html',
   styleUrl: './message.component.css'
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent implements OnInit, OnChanges{
 
   @Output() conexao = new EventEmitter;
+  @Output() followUser = new EventEmitter;
+  @Input() unfollowed!: number;
+
   grupos: Grupo[] = [];
   gruposFilter: Grupo[] = [];
   personagens: Personagem[] = [];
@@ -39,6 +43,12 @@ export class MessageComponent implements OnInit {
     private grupoService: GrupoService,
     private signalService: SignalRService,
   ){}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('input value changed')
+    this.get();
+    this.getAllUnFollowing()
+  }
 
   ngOnInit(): void {
     this.getMyPersonagem();
@@ -95,6 +105,8 @@ export class MessageComponent implements OnInit {
     this.follow.personagemId = iduser;
     this.personagemService.follow(this.follow).subscribe({
       next:(res=>{
+        this.followUser.emit("");
+        this.get();
         this.getAllUnFollowing()
       }),
       error:(()=>{
