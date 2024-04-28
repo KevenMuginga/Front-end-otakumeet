@@ -1,5 +1,25 @@
 # Otakumeet
 
+![Captura de Tela (200)](https://github.com/KevenMuginga/Front-end-otakumeet/assets/110440250/6aa20073-016c-4b43-be3d-268ec4b68a20)
+![d-otakumeet](https://github.com/KevenMuginga/api-otakumeet/assets/110440250/c35675bc-e0c9-435b-9911-e3673d66132f)
+
+Uma pequena rede social em uma pessoa podera criar a sua conta como um personagem de um anime, após o login poderá:
+
+
+Utilizado:
+
+autenticação JWT;
+troca de mensagens em tempo real com SIGNALR
+
+fazer posts
+Ver posts feitos, ver comentarios em um post, comentar em posts;
+Ver personagens, seguir personagens;
+visitar o perfil de um personagem e ver os seus posts;
+
+ao seguir um personagem é criado um chat entre persongens, podendo enviar mensagens para o chat;
+armazenamento de mensagens
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
 ## Development server
